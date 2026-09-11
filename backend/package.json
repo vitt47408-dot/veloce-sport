@@ -1,0 +1,11 @@
+{
+  "name": "veloce-sport-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "API backend for Veloce Sport Zalo Mini App",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  }
+}
