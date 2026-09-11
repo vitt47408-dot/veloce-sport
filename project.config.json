@@ -1,0 +1,36 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "veloce-sport-zalo-miniapp",
+  "description": "Veloce Sport - Zalo Mini App bán đồ thể thao chính hãng",
+  "appid": "zalo-veloce-sport",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "useCompilerModule": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.0.0",
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": []
+    }
+  }
+}

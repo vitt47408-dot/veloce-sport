@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veloce Admin</title>
+  <link rel="stylesheet" href="styles.css?v=14" />
+</head>
+<body class="admin-body">
+  <div class="admin-login" id="admin-login">
+    <div class="admin-login-card">
+      <div class="brand"><span class="brand-mark">V</span><div class="brand-word"><b>VELOCE</b><small>ADMIN</small></div></div>
+      <h1>Bảng điều khiển</h1>
+      <p class="muted-copy">Đăng nhập tài khoản admin hoặc nhân viên.</p>
+      <form id="admin-login-form" class="auth-form">
+        <input id="admin-email" placeholder="Email" value="admin@veloce.vn" required>
+        <input id="admin-password" type="password" placeholder="Mật khẩu" value="admin123" required>
+        <button class="primary-btn" type="submit">Đăng nhập</button>
+      </form>
+      <p class="muted-copy">admin@veloce.vn / admin123 · kho@veloce.vn / staff123</p>
+      <a href="/">← Về cửa hàng</a>
+    </div>
+  </div>
+
+  <div class="admin-app" id="admin-app" hidden>
+    <aside class="admin-nav">
+      <div class="brand" onclick="location.href='/'"><span class="brand-mark">V</span><div class="brand-word"><b>VELOCE</b><small>ADMIN</small></div></div>
+      <button class="admin-menu-toggle" id="admin-menu-toggle" type="button" aria-expanded="false">☰ <span>Menu quản trị</span><b>⌄</b></button>
+      <nav id="admin-menu" hidden>
+        <button data-view="overview" class="active">Dashboard</button>
+        <button data-view="products">Sản phẩm</button>
+        <button data-view="categories">Danh mục</button>
+        <button data-view="brands">Thương hiệu</button>
+        <button data-view="inventory">Tồn kho</button>
+        <button data-view="orders">Đơn hàng</button>
+        <button data-view="customers">Khách hàng</button>
+        <button data-view="vouchers">Voucher</button>
+        <button data-view="banners">Banner</button>
+        <button data-view="reviews">Đánh giá</button>
+        <button data-view="staff">Nhân viên</button>
+        <button data-view="reports">Doanh thu</button>
+      </nav>
+      <div class="admin-user">
+        <strong id="admin-who"></strong>
+        <button class="text-btn" id="admin-logout">Đăng xuất</button>
+      </div>
+    </aside>
+    <main class="admin-main">
+      <header class="admin-head"><h1 id="admin-title">Dashboard</h1><a class="text-btn" href="/">Xem cửa hàng</a></header>
+      <section class="admin-view" id="view"></section>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="admin.js?v=15"></script>
+</body>
+</html>

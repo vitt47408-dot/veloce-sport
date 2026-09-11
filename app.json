@@ -1,0 +1,59 @@
+{
+  "app_id": "zalo-veloce-sport",
+  "app_name": "Veloce Sport",
+  "app_description": "Cửa hàng đồ thể thao chính hãng - Giày chạy bộ, đồ tập gym, phụ kiện thể thao",
+  "version": "1.0.0",
+  "min_sdk_version": "2.0.0",
+  "icon": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=minimalist%20sport%20brand%20logo%20letter%20V%20with%20athletic%20swoosh%20black%20lime%20green%20modern%20geometric&image_size=square",
+  "status_bar_style": "dark",
+  "navigation_bar": {
+    "background_color": "#10151b",
+    "text_color": "#ffffff",
+    "title": "Veloce Sport"
+  },
+  "tab_bar": {
+    "color": "#9ba19d",
+    "selected_color": "#10151b",
+    "background_color": "#ffffff",
+    "list": [
+      {
+        "page_path": "pages/home/index",
+        "text": "Khám phá"
+      },
+      {
+        "page_path": "pages/products/index",
+        "text": "Sản phẩm"
+      },
+      {
+        "page_path": "pages/cart/index",
+        "text": "Giỏ hàng"
+      },
+      {
+        "page_path": "pages/profile/index",
+        "text": "Tài khoản"
+      }
+    ]
+  },
+  "pages": [
+    "pages/home/index",
+    "pages/products/index",
+    "pages/product-detail/index",
+    "pages/cart/index",
+    "pages/checkout/index",
+    "pages/orders/index",
+    "pages/profile/index"
+  ],
+  "permission": {
+    "scope.userInfo": {
+      "desc": "Để hiển thị thông tin cá nhân và lịch sử mua hàng"
+    },
+    "scope.userLocation": {
+      "desc": "Đề xuất cửa hàng gần bạn và tính phí giao hàng"
+    }
+  },
+  "networkTimeout": {
+    "request": 15000,
+    "downloadFile": 30000
+  },
+  "debug": false
+}

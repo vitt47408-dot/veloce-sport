@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Veloce Sport — Premium Athletic Gear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=27" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="brand-mark">V</span><div class="brand-word"><b>VELOCE</b><small>SPORT CO.</small></div></div>
+      <div class="header-actions">
+        <a class="admin-link" href="/admin.html">Admin</a>
+        <button class="icon-btn" id="track-order" aria-label="Theo dõi đơn hàng">◎<span class="notification-dot" id="notif-dot" hidden></span></button>
+        <button class="profile-chip" id="profile-chip" aria-label="Tài khoản"><span class="avatar" id="header-avatar">IN</span></button>
+      </div>
+    </header>
+    <div class="promo-strip"><span>MỪNG RA MẮT</span><strong><b>Giảm 15%</b> toàn bộ đơn hàng đầu tiên — dùng mã VELOCE15</strong><button data-scroll-products>Khám phá <b>→</b></button></div>
+    <nav class="bottom-nav"><button class="nav-item active" data-nav="home"><span>⌂</span><small>Trang chủ</small></button><button class="nav-item" id="focus-search"><span>⌕</span><small>Sản phẩm</small></button><button class="nav-item cart-nav" id="open-cart"><span>▢<b id="cart-count">0</b></span><small>Giỏ hàng</small></button><button class="nav-item" id="open-orders-nav"><span>◷</span><small>Đơn hàng</small></button><button class="nav-item" id="open-member"><span>◎</span><small>Cá nhân</small></button></nav>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse"></span>Est. 2024 — Cửa hàng chính hãng</p>
+          <h1>Move with<br><em>purpose.</em></h1>
+          <p class="hero-text">Thiết bị thể thao cao cấp, tuyển chọn kỹ lưỡng. Giao hàng 24 giờ, đổi hàng 30 ngày, bảo hành chính hãng trọn đời.</p>
+          <div class="hero-actions"><button class="primary-btn" data-scroll-products>Bộ sưu tập mới <span>↗</span></button><button class="secondary-btn ghost" id="open-ai-hero">Hỏi AI Coach <span>✦</span></button></div>
+        </div>
+        <div class="hero-visual hero-solar">
+          <div class="stars-layer"></div>
+          <div class="solar-system">
+            <span class="sun-core"></span>
+            <span class="sun-halo"></span>
+            <span class="sun-corona"></span>
+            <span class="orbit orbit-1"><span class="planet planet-mercury"></span></span>
+            <span class="orbit orbit-2"><span class="planet planet-venus"></span></span>
+            <span class="orbit orbit-3"><span class="planet planet-earth"><i></i></span></span>
+            <span class="orbit orbit-4"><span class="planet planet-mars"></span></span>
+            <span class="orbit orbit-5"><span class="planet planet-jupiter"><i></i><i></i></span></span>
+            <span class="orbit orbit-6"><span class="planet planet-saturn"><em></em></span></span>
+          </div>
+          <span class="comet"></span>
+          <div class="hero-label label-top"><strong>№01</strong><span>Vũ trụ vận động</span></div>
+          <div class="hero-label label-bottom">Every orbit. <strong>Every step.</strong></div>
+        </div>
+      </section>
+
+      <section class="quick-stats">
+        <div><strong>24h</strong><span>Giao hàng nội thành</span></div>
+        <div><strong>30 ngày</strong><span>Đổi trả miễn phí</span></div>
+        <div><strong>4.9/5</strong><span>Hơn 20,000+ đánh giá</span></div>
+      </section>
+
+      <section class="section home-rails" id="home-rails">
+        <div class="banner-track" id="banner-track"></div>
+        <article class="flash-banner" id="flash-banner" hidden></article>
+        <div class="cat-showcase" id="cat-showcase"></div>
+        <div class="section-heading"><div><p class="eyebrow">Nổi bật</p><h2>Sản phẩm nổi bật</h2></div></div>
+        <div class="product-grid rail-grid" id="featured-grid"></div>
+        <div class="section-heading"><div><p class="eyebrow">Mới về</p><h2>Sản phẩm mới</h2></div></div>
+        <div class="product-grid rail-grid" id="new-grid"></div>
+        <div class="section-heading"><div><p class="eyebrow">Bán chạy</p><h2>Best seller</h2></div></div>
+        <div class="product-grid rail-grid" id="best-grid"></div>
+        <div class="section-heading"><div><p class="eyebrow">Ưu đãi</p><h2>Sản phẩm giảm giá</h2></div></div>
+        <div class="product-grid rail-grid" id="sale-grid"></div>
+        <div class="combo-row" id="combo-row"></div>
+        <div class="section-heading"><div><p class="eyebrow">Journal</p><h2>Tin tức thể thao</h2></div></div>
+        <div class="blog-row" id="blog-row"></div>
+      </section>
+
+      <section class="section products-section" id="products">
+        <div class="section-heading"><div><p class="eyebrow">Bộ sưu tập mùa này</p><h2>Tuyển chọn thiết bị thể thao</h2></div><button class="text-btn" id="show-all">Xem toàn bộ <span>→</span></button></div>
+        <div class="store-tools">
+          <label class="search-box"><span>⌕</span><input id="product-search" type="search" placeholder="Tìm tên, loại, thương hiệu..." /></label>
+          <select id="brand-filter" aria-label="Lọc thương hiệu"><option value="all">Tất cả thương hiệu</option></select>
+          <select id="price-filter" aria-label="Lọc giá"><option value="all">Mọi mức giá</option><option value="under200">Dưới 200K</option><option value="200to500">200K — 500K</option><option value="500to1000">500K — 1.000K</option><option value="over1000">Trên 1.000K</option></select>
+          <select id="sport-filter" aria-label="Môn thể thao"><option value="all">Mọi môn</option><option value="running">Chạy bộ</option><option value="football">Bóng đá</option><option value="badminton">Cầu lông</option><option value="basketball">Bóng rổ</option><option value="tennis">Tennis</option><option value="training">Gym</option><option value="yoga">Yoga</option><option value="cycling">Đạp xe</option><option value="swimming">Bơi lội</option></select>
+          <select id="usecase-filter" aria-label="Nhu cầu"><option value="all">Mọi nhu cầu</option><option value="long-distance">Chạy đường dài</option><option value="trail">Chạy trail</option><option value="gym">Tập gym</option><option value="artificial-grass">Sân cỏ nhân tạo</option><option value="natural-grass">Sân cỏ tự nhiên</option><option value="daily">Hằng ngày</option></select>
+          <select id="size-filter" aria-label="Size"><option value="all">Mọi size</option></select>
+          <select id="color-filter" aria-label="Màu"><option value="all">Mọi màu</option></select>
+          <select id="sort-filter" aria-label="Sắp xếp"><option value="featured">Nổi bật</option><option value="price-asc">Giá thấp → cao</option><option value="price-desc">Giá cao → thấp</option><option value="bestseller">Bán chạy</option><option value="newest">Mới nhất</option></select>
+        </div>
+        <div class="size-guide-bar"><input id="foot-length" type="number" step="0.1" placeholder="Chiều dài bàn chân (cm)"><input id="foot-width" type="number" step="0.1" placeholder="Chiều rộng (cm)"><button id="suggest-size">Gợi ý size</button><span id="size-hint"></span></div>
+        <div class="category-tabs" id="category-tabs"></div>
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+
+      <section class="section story-section"><div class="story-card"><div><p class="eyebrow">The Veloce Journal · № 007</p><h2>Mỗi bước chân<br>là một lời hứa với chính mình.</h2><p>Giống như hành tinh luôn quay đều quanh mặt trời, sự kiên trì mỗi ngày của bạn không cần fanfare — nó chỉ cần nhất quán. 42,195 km là 42,195 quyết định: "Tôi vẫn tiếp tục."</p><div class="metrics-row"><div><strong>8,378</strong><span>Veloce Runner Club</span></div><div><strong>126</strong><span>Giải chạy phối hợp</span></div><div><strong>42.195</strong><span>Km hành trình phổ thông</span></div></div><button class="text-btn">Tham gia Veloce Runners <span>→</span></button></div><div class="story-art story-runner">
+            <div class="horizon"></div>
+            <span class="sun"></span>
+            <span class="mountain mountain-back"></span>
+            <span class="mountain mountain-front"></span>
+            <span class="runner"></span>
+            <span class="runner-shadow"></span>
+            <div class="distance-tag"><strong>42,195 km</strong><span>MARATHON · FULL DISTANCE</span></div>
+          </div></div></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="brand"><span class="brand-mark">V</span><div class="brand-word"><b>VELOCE</b><small>SPORT CO.</small></div></div>
+          <p>Thiết bị thể thao cao cấp được tuyển chọn kỹ lưỡng. Dành cho những người vận động tôn trọng sự hoàn hảo trong từng chi tiết.</p>
+          <div class="footer-contact">
+            <div><span>Hotline</span><b>1900 6868</b> · 8:00 — 22:00 mỗi ngày</div>
+            <div><span>Email</span>care@veloce.vn</div>
+            <div><span>Showroom</span>45 Tràng Tiền, Hoàn Kiếm, Hà Nội</div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Danh mục</h4>
+          <ul>
+            <li><a href="#products" data-category="running">Giày chạy bộ</a></li>
+            <li><a href="#products" data-category="training">Trang bị tập gym</a></li>
+            <li><a href="#products" data-category="basketball">Bóng rổ</a></li>
+            <li><a href="#products" data-category="football">Bóng đá</a></li>
+            <li><a href="#products" data-category="tennis">Tennis</a></li>
+            <li><a href="#products" data-category="yoga">Yoga &amp; Thiền</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li><a href="#">Chính sách giao hàng 24h</a></li>
+            <li><a href="#">Đổi trả miễn phí 30 ngày</a></li>
+            <li><a href="#">Bảo hành chính hãng</a></li>
+            <li><a href="#">Hướng dẫn chọn size</a></li>
+            <li><a href="#">Thẻ thành viên</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Cộng đồng</h4>
+          <ul>
+            <li><a href="#">Veloce Running Club</a></li>
+            <li><a href="#">Veloce Hoops League</a></li>
+            <li><a href="#">Sự kiện thể thao</a></li>
+            <li><a href="#">Veloce Journal</a></li>
+            <li><a href="#">Collabs &amp; Hợp tác</a></li>
+          </ul>
+          <div class="newsletter-box">
+            <b>Newsletter</b>
+            <small>Nhận ưu đãi đặc biệt &amp; chương trình thành viên mỗi tuần.</small>
+            <div class="newsletter-row"><input id="newsletter-email" type="email" placeholder="Email của bạn"><button id="newsletter-btn" type="button">Join</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <small>© 2025 Veloce Sport Co. All rights reserved · Giấy phép ĐKKD 0123456789</small>
+        <div class="footer-payment">
+          <span>ZALOPAY</span><span>VISA</span><span>MASTER</span><span>COD</span><span>MOMO</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <button class="floating-cart" id="floating-cart" aria-label="Mở giỏ hàng"><span class="cart-symbol">▢</span><b id="floating-cart-count">0</b><small>Giỏ hàng</small></button>
+  <button class="floating-ai" id="floating-ai" aria-label="Mở chatbot chăm sóc khách hàng"><span class="chat-bubble-icon">💬</span><small>CSKH AI</small></button>
+
+  <aside class="store-panel" id="cart-panel" aria-hidden="true"><div class="panel-backdrop" data-close-panel></div><div class="store-drawer"><div class="drawer-head"><div><p class="eyebrow">Veloce checkout</p><strong>Giỏ hàng của bạn</strong></div><button class="close-btn" data-close-panel>×</button></div><div class="cart-body" id="cart-body"></div><div class="cart-footer"><div class="coupon-row"><input id="coupon-input" placeholder="Mã giảm giá / FREESHIP"><button id="apply-coupon">Áp dụng</button></div><div class="checkout-fields"><input id="customer-name" placeholder="Họ và tên *"><input id="customer-phone" type="tel" placeholder="Số điện thoại *"><input id="shipping-address" placeholder="Địa chỉ nhận hàng *"><select id="ship-method"><option value="standard">Giao tiêu chuẩn — 30.000đ</option><option value="express">Giao hỏa tốc — 45.000đ</option><option value="store">Nhận tại showroom — miễn phí</option></select><select id="payment-method"><option value="cod">COD — thanh toán khi nhận</option><option value="bank">Chuyển khoản</option><option value="momo">Ví MoMo</option><option value="zalopay">ZaloPay / cổng online</option></select></div><div class="total-breakdown" id="total-breakdown"></div><div class="total-row"><span>Tổng thanh toán</span><strong id="cart-total">0đ</strong></div><button class="primary-btn checkout-btn" id="checkout">Xác nhận đặt hàng <span>→</span></button></div></div></aside>
+  <aside class="store-panel" id="order-panel" aria-hidden="true"><div class="panel-backdrop" data-close-panel></div><div class="store-drawer"><div class="drawer-head"><div><p class="eyebrow">Veloce orders</p><strong>Theo dõi đơn hàng</strong></div><button class="close-btn" data-close-panel>×</button></div><div class="order-body" id="order-body"></div></div></aside>
+  <aside class="store-panel" id="payment-panel" aria-hidden="true"><div class="panel-backdrop" data-close-panel></div><div class="store-drawer"><div class="drawer-head"><div><p class="eyebrow">Thanh toán online</p><strong>Thông tin chuyển khoản</strong></div><button class="close-btn" data-close-panel>×</button></div><div class="payment-body" id="payment-body"></div></div></aside>
+  <aside class="store-panel" id="auth-panel" aria-hidden="true"><div class="panel-backdrop" data-close-panel></div><div class="store-drawer"><div class="drawer-head"><div><p class="eyebrow">Tài khoản</p><strong id="auth-title">Đăng nhập</strong></div><button class="close-btn" data-close-panel>×</button></div><div class="member-body auth-body"><div class="auth-tabs"><button class="tab active" data-auth="login">Đăng nhập</button><button class="tab" data-auth="register">Đăng ký</button><button class="tab" data-auth="forgot">Quên mật khẩu</button></div><form id="auth-form" class="auth-form"><input id="auth-name" placeholder="Họ tên" hidden><input id="auth-email" placeholder="Email hoặc số điện thoại" required><input id="auth-phone" placeholder="Số điện thoại" hidden><input id="auth-password" type="password" placeholder="Mật khẩu" required><input id="auth-referral" placeholder="Mã giới thiệu (tuỳ chọn)" hidden><input id="auth-reset-code" placeholder="Mã đặt lại mật khẩu" hidden><button class="primary-btn" type="submit" id="auth-submit">Đăng nhập</button></form><div class="social-row"><button type="button" id="login-google">Tiếp tục với Google</button><button type="button" id="login-facebook">Tiếp tục với Facebook</button></div><p class="muted-copy" id="auth-hint">Demo: minh@veloce.vn / 123456 · Admin: admin@veloce.vn / admin123</p></div></div></aside>
+  <aside class="store-panel" id="member-panel" aria-hidden="true"><div class="panel-backdrop" data-close-panel></div><div class="store-drawer"><div class="drawer-head"><div><p class="eyebrow">Veloce membership</p><strong id="member-name">Tài khoản</strong></div><button class="close-btn" data-close-panel>×</button></div><div class="member-body" id="member-body"></div></div></aside>
+  <aside class="store-panel" id="compare-panel" aria-hidden="true"><div class="panel-backdrop" data-close-panel></div><div class="store-drawer wide"><div class="drawer-head"><div><p class="eyebrow">So sánh</p><strong>Giá · trọng lượng · chất liệu</strong></div><button class="close-btn" data-close-panel>×</button></div><div class="member-body" id="compare-body"></div></div></aside>
+  <aside class="store-panel" id="notif-panel" aria-hidden="true"><div class="panel-backdrop" data-close-panel></div><div class="store-drawer"><div class="drawer-head"><div><p class="eyebrow">Thông báo</p><strong>Giảm giá &amp; restock</strong></div><button class="close-btn" data-close-panel>×</button></div><div class="member-body" id="notif-body"></div></div></aside>
+  <aside class="store-panel" id="shop-panel" aria-hidden="true"><div class="panel-backdrop" data-close-panel></div><div class="store-drawer"><div class="drawer-head"><div><p class="eyebrow">Hỗ trợ</p><strong>Chat với shop</strong></div><button class="close-btn" data-close-panel>×</button></div><div class="chat-body" id="shop-chat-body"></div><form class="chat-form" id="shop-chat-form"><input id="shop-chat-input" placeholder="Nhắn cho shop..." autocomplete="off"><button aria-label="Gửi">↑</button></form></div></aside>
+  <div class="product-modal" id="product-modal" aria-hidden="true"><div class="panel-backdrop" data-close-product></div><div class="product-modal-card"><button class="close-btn" data-close-product>×</button><div class="modal-product-image" id="modal-product-image"></div><div class="modal-product-copy"><p class="eyebrow" id="modal-category"></p><h2 id="modal-name"></h2><strong class="modal-price" id="modal-price"></strong><p id="modal-stock"></p><p id="modal-description"></p><div class="spec-grid" id="modal-specs"></div><label>Màu sắc<select id="modal-color"></select></label><div class="size-picker"><span>Kích thước</span><div id="modal-sizes"></div></div><div class="quantity-row"><span>Số lượng</span><div><button id="quantity-minus">−</button><strong id="modal-quantity">1</strong><button id="quantity-plus">+</button></div></div><div class="modal-actions"><button class="primary-btn" id="modal-add">Thêm vào giỏ <span>→</span></button><button class="secondary-btn" id="modal-wish">Yêu thích</button><button class="text-btn" id="modal-compare">So sánh</button><button class="text-btn" id="modal-watch">Báo khi có hàng / giảm giá</button></div><div id="modal-reviews"></div><div id="modal-related"></div></div></div></div>
+
+  <aside class="ai-panel" id="ai-panel" aria-hidden="true"><div class="panel-backdrop" data-close-ai></div><div class="ai-drawer"><div class="drawer-head"><div class="ai-title"><span class="ai-icon">✦</span><div><strong>Veloce AI Coach</strong><small>Đang trực tuyến</small></div></div><button class="close-btn" data-close-ai>×</button></div><div class="chat-body" id="chat-body"><div class="chat-message bot">Chào Minh Anh! Mình là trợ lý của Veloce. Bạn đang muốn chinh phục mục tiêu nào hôm nay?</div><div class="suggestions"><button data-prompt="Mình muốn bắt đầu chạy bộ">Bắt đầu chạy bộ</button><button data-prompt="Tìm đồ tập gym">Tập gym</button><button data-prompt="Trang bị bóng rổ cho người mới">Bóng rổ</button><button data-prompt="Combo tập yoga tại nhà">Yoga tại nhà</button><button data-prompt="Trang bị đạp xe đường phố">Đạp xe</button><button data-prompt="Tư vấn size 170cm 65kg">Tư vấn size</button><button data-prompt="Tìm đồ dưới 2 triệu">Dưới 2 triệu</button></div></div><form class="chat-form" id="chat-form"><input id="chat-input" placeholder="Nhắn cho AI Coach..." autocomplete="off"><button aria-label="Gửi">↑</button></form></div></aside>
+  <div class="toast" id="toast">Đã thêm vào giỏ hàng</div>
+  <script src="app.js?v=24"></script>
+</body>
+</html>
